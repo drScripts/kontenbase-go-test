@@ -4,7 +4,7 @@ import "github.com/drScripts/kontenbase-go-test/client"
 
 type Client struct {
 	apiKey   string
-	queryUrl string
+	QueryUrl string
 	headers  map[string]string
 
 	Auth     *client.AuthClient
@@ -27,11 +27,11 @@ func NewClient(apiKey string, url string) *Client {
 	c := &Client{
 		apiKey:   apiKey,
 		headers:  map[string]string{},
-		queryUrl: url + "/" + apiKey,
+		QueryUrl: url + "/" + apiKey,
 	}
 
-	c.Auth = client.NewAuthClient(c.queryUrl+"/auth", c.headers)
-	c.Storage = client.NewStorageClient(c.queryUrl+"/storage", c.Auth)
+	c.Auth = client.NewAuthClient(c.QueryUrl+"/auth", c.headers)
+	c.Storage = client.NewStorageClient(c.QueryUrl+"/storage", c.Auth)
 	c.Realtime = client.NewRealtimeClient(defaultDomain+"/stream", c.apiKey, c.Auth)
 
 	return c
@@ -49,5 +49,5 @@ func (c *Client) getHeaders() map[string]string {
 }
 
 func (c *Client) Service(name string) *client.QueryClient {
-	return client.NewQueryClient(c.queryUrl+"/"+name, c.getHeaders())
+	return client.NewQueryClient(c.QueryUrl+"/"+name, c.getHeaders())
 }
