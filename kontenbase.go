@@ -1,6 +1,6 @@
 package kontenbase
 
-import "github.com/kontenbase/kontenbase-go/client"
+import "github.com/drScripts/kontenbase-go-test/client"
 
 type Client struct {
 	apiKey   string

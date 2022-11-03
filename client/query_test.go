@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/kontenbase/kontenbase-go/options"
+	"github.com/drScripts/kontenbase-go-test/options"
 )
 
 var queryClient = NewQueryClient("https://api.kontenbase.com/query/api/v1/"+apiKey+"/Movies", map[string]string{

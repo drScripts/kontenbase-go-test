@@ -1,4 +1,4 @@
-module github.com/kontenbase/kontenbase-go
+module github.com/drScripts/kontenbase-go-test
 
 go 1.18
 

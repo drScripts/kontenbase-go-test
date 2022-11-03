@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/kontenbase/kontenbase-go/options"
+	"github.com/drScripts/kontenbase-go-test/options"
 )
 
 var realtimeClient = NewRealtimeClient("https://api.kontenbase.com/stream", apiKey, authClient)

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kontenbase/kontenbase-go/options"
-	"github.com/kontenbase/kontenbase-go/utils"
+	"github.com/drScripts/kontenbase-go-test/options"
+	"github.com/drScripts/kontenbase-go-test/utils"
 
 	"github.com/centrifugal/centrifuge-go"
 )
